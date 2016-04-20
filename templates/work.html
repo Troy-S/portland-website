@@ -7,13 +7,41 @@
 		    </div>
 		</md-toolbar>
 
+<script type="text/javascript">
+	$('.main-slider').slick({
+		dots: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000
+	});
+</script>
+
 		<div class="work-container">
-			<slick>
-				<div><img ng-src="/assets/cw-carousel1.jpg" /></div>
-				<div><img ng-src="/assets/cw-carousel2.jpg" /></div>
-				<div><img ng-src="/assets/cw-carousel3.jpg" /></div>
-				<div><img ng-src="/assets/cw-carousel4.jpg" /></div>
-			</slick>
+			<div class="main-slider">
+				<div><img class="carousel-images" ng-src="/assets/cw-carousel1.jpg" ng-cloak/></div>
+				<div><img class="carousel-images" ng-src="/assets/cw-carousel2.jpg" ng-cloak/></div>
+				<div><img class="carousel-images" ng-src="/assets/cw-carousel3.jpg" ng-cloak/></div>
+			</div>
 		</div>
+
+		<div layout="row" class="hero-text">
+			<p layout-align="center center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div>
+			<img class="big-summary-image" ng-src="/assets/cw-summary.jpg" />
+		</div>
+
+		<div >
+			
+		</div>
+
 	</body>
 </html>

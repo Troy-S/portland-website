@@ -5,5 +5,5 @@ angular.module('portlandApp.controllers', [])
 })
 
 .controller('WorkController', function($scope) {
-	console.log('hello');
+
 })
