@@ -1,0 +1,124 @@
+/*GLOBAL STYLES*/
+
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/*HOME PAGE*/
+.portland-nav {
+	margin-left: 85%;
+	color: white;
+}
+
+.nav-bar {
+	background: black;
+	height: 20vw;
+}
+
+.tile-one {
+	height: 46vh;
+	width: 25vw;
+	background-color: yellow;
+	position: relative;
+}
+
+.tile-two {
+	height: 46vh;
+	width: 25vw;
+	background-color: pink;
+	position: relative;
+}
+
+.tile-three {
+	height: 46vh;
+	width: 50vw;
+	background-color: grey;
+	position: relative;
+}
+
+.tile-four {
+	height: 46vh;
+	width: 50vw;
+	background-color: ;
+	position: relative;
+	background-image: url('/assets/studio-home.jpg');
+}
+
+.tile-five {
+	height: 46vh;
+	width: 25vw;
+	background-color: navy;
+	position: relative;
+	background-image: url('/assets/twitter-home.jpg');
+}
+
+.tile-six {
+	height: 46vh;
+	width: 25vw;
+	background-color: green;
+	position: relative;
+	background-image: url('/assets/bracknell-home.jpg');
+}
+
+.tile-banner {
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(1,1,1, 0.7);
+}
+
+.home-container {
+	display: flex;
+}
+
+.tile-title {
+	margin-left: 2%;
+	font-size: 1.1em;
+	color: white;
+	overflow: hidden;
+}
+
+.fl-right {
+	float: right;
+	color: white;
+	margin-right: 2%;
+}
+
+@font-face {
+	font-family: portland-bold-font;
+	src: url('Gotham-Bold.otf');
+}
+
+@font-face {
+	font-family: portland-thin-font;
+	src: url('Gotham-Thin.otf');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
