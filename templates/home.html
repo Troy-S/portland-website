@@ -1,10 +1,10 @@
-<html>
+<html style="">
 	<body>
-		<div ng-controller="HomeController" ng-cloak>
+		<div style="position: fixed;" ng-controller="HomeController" ng-cloak>
 			<md-toolbar layout="column">
 			    <div class="md-toolbar-tools nav-bar">
 			    	<span flex></span>
-			      <md-button class="portland-nav">PORTLAND.</md-button>
+			      	<md-button class="portland-nav">PORTLAND.<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder</md-icon></md-button>
 			    </div>
 			</md-toolbar>
 
@@ -13,44 +13,41 @@
 					<a ui-sref="work">
 					<img ng-src="/assets/ukcoffeeweek-home.jpg" />
 					<div class="tile-banner">
-						<h1 class="tile-title">UK Coffee Week<span class="fl-right">WORK</span></h1>
+						<h1 class="tile-title" style="color: gold;">UK Coffee Week<span class="fl-right">WORK</span></h1>
 					</div></a>
 				</div>	
-
 				<div class="tile-two" layout="row">
 					<img ng-src="/assets/amuse-home.jpg" />
 					<div class="tile-banner">
-						<h1 class="tile-title">Amuse Beauty Studio<span class="fl-right">WORK</span></h1>
+						<h1 class="tile-title" style="color: pink;">Amuse Beauty Studio<span class="fl-right">WORK</span></h1>
 					</div>
 				</div>				
-
 				<div class="tile-three" layout="row">
 					<img ng-src="/assets/clickcollect-home.jpg" />
 					<div class="tile-banner">
-						<h1 class="tile-title">Retail Design World<span class="fl-right">NEWS</span></h1>
+						<h1 class="tile-title" style="color: darkgrey;">Retail Design World<span class="fl-right">NEWS</span></h1>
 					</div>
 				</div>
 			</div>
 
 			<div class="home-container">
 				<div class="tile-four" layout="row" flex="50">
-					<div class="tile-banner">
-						<h1 class="tile-title">Portland.<span class="fl-right">STUDIO</span></h1>
+					<div style="height: 10% !important" class="tile-banner">
+						<h1 class="tile-title" style="color: orange;">Portland.<span class="fl-right">STUDIO</span></h1>
 					</div>
 				</div>	
-
 				<div class="tile-five" layout="row" flex="25">
-					<div class="tile-banner">
-						<h1 class="tile-title">Twitter<span class="fl-right">NEWS</span></h1>
+					<div style="height: 10% !important" class="tile-banner">
+						<h1 class="tile-title" style="color: lightblue;">Twitter<span class="fl-right">NEWS</span></h1>
 					</div>
 				</div>				
-
 				<div class="tile-six" layout="row" flex="25">
-					<div class="tile-banner">
-						<h1 class="tile-title">Bracknell Regeneration<span class="fl-right">WORK</span></h1>
+					<div style="height: 10% !important" class="tile-banner">
+						<h1 class="tile-title" style="color: green;">Bracknell Regeneration<span class="fl-right">WORK</span></h1>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</body>
 </html>

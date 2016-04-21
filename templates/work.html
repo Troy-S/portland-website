@@ -1,29 +1,52 @@
-<html>
-	<body>
-		<md-toolbar layout="column">
+<html style="background-color: black !important;">
+	<body layout="row">
+
+		<md-toolbar layout="column" flex>
 		    <div class="md-toolbar-tools nav-bar">
+		    	<h1 class="nav-subtitle">BRANDING</h1>
 		    	<span flex></span>
-		      <md-button class="portland-nav">PORTLAND.</md-button>
+		      	<md-button class="portland-nav">PORTLAND.<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder</md-icon></md-button>
 		    </div>
 		</md-toolbar>
 
 <script type="text/javascript">
+	$(document).ready(function() {
 	$('.main-slider').slick({
 		dots: false,
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 3000
+		autoplaySpeed: 3000,
+		speed: 100,
+		arrows: false
 	});
+
+	$('.main-slider').on('afterChange', function(event, slick, currentSlide) {
+		if (currentSlide == 0) {
+			$('.main-slider').slick('slickPause');
+			theVideo.play();
+		}
+	});
+
+	document.getElementById('theVideo').addEventListener('ended', myHandler, false);
+
+	function myHandler(e) {
+		$('main-slider ').slick('slickPlay');
+	};
+});
+
 </script>
 
-		<div class="work-container">
-			<div class="main-slider">
-				<div><img class="carousel-images" ng-src="/assets/cw-carousel1.jpg" ng-cloak/></div>
-				<div><img class="carousel-images" ng-src="/assets/cw-carousel2.jpg" ng-cloak/></div>
-				<div><img class="carousel-images" ng-src="/assets/cw-carousel3.jpg" ng-cloak/></div>
+		<div class="main-slider" layout-fill>
+			<div>
+				<video id="theVideo" class="video-align" ng-src="/assets/cw-carousel-video.mp4" ng-cloak autoplay muted>
+					<source class="carousel-video" ng-src="/assets/cw-carousel-video.mp4" type="video/mp4" muted/>
+				</video>
 			</div>
+			<div><img class="carousel-images" ng-src="/assets/cw-carousel1.jpg" ng-cloak/></div>
+			<div><img class="carousel-images" ng-src="/assets/cw-carousel2.jpg" ng-cloak/></div>
+			<div><img class="carousel-images" ng-src="/assets/cw-carousel3.jpg" ng-cloak/></div>
 		</div>
 
 		<div layout="row" class="hero-text">
@@ -39,8 +62,29 @@
 			<img class="big-summary-image" ng-src="/assets/cw-summary.jpg" />
 		</div>
 
-		<div >
-			
+		<div>
+			<p layout-align="center" class="small-summary-text">	
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Excepteur 
+				sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.
+			</p>
+			<div>
+				<img style="width: 50%; height: auto;" ng-src="/assets/cw-summary-small1.jpg" />
+			</div>
+		</div>
+
+		<div class="video-container">
+			<video class="video-align" preload="none" poster="/assets/cw-video-image.png" controls>
+				<source preload="none" ng-src="/assets/cw-carousel-video2.mp4" type="video/mp4"/>
+			</video>
+		</div>
+
+		<div class="summary-bottom">
+			<img class="summary-image" ng-src="/assets/cw-summary-bottom.jpg" />
 		</div>
 
 	</body>

@@ -3,6 +3,9 @@
 html {
 	box-sizing: border-box;
 	font-size: 10px;
+	width: auto;
+	height: auto;
+	font-family: portland-thin-font;
 }
 
 *, *:before, *:after {
@@ -22,13 +25,25 @@ html {
 
 /*HOME PAGE*/
 .portland-nav {
-	margin-left: 85%;
+	margin-right: 1% !important;
 	color: white;
+	font-family: portland-bold-font;
+	font-size: 0.9em;
+}
+
+.portland-menu-icon {
+	font-size: 1.5em;
 }
 
 .nav-bar {
 	background: black;
-	height: 20vw;
+	height: 20vh;
+	position: fixed;
+}
+
+.nav-subtitle {
+	margin-right: 80%;
+	font-family: portland-bold-font;
 }
 
 .tile-one {
@@ -79,7 +94,7 @@ html {
 .tile-banner {
 	position: absolute;
 	width: 100%;
-	height: 10%;
+	height: 9%;
 	bottom: 0;
 	left: 0;
 	background-color: rgba(1,1,1, 0.7);
@@ -105,25 +120,101 @@ html {
 /*WORK PAGE*/
 
 .carousel-images {
-	height: 91vh;
-	width: 100vw;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel-video {
+	height: 679px !important;
+	width: 100vw !important;
 }
 
 .hero-text {
-	height: 40vh;
-	width: auto;
+	/*height: 40vh;*/
+	/*width: auto;*/
+	margin-top: 0.3%;
 	background: black;
 	color: white;
-	font-size: 2em;
-	margin-top: -3%;
-	padding: 5%;
+	font-size: 1.5em;
+	font-family: portland-bold-font;
+	padding: 2%;
 	justify-content: center;
+	text-align: center;
+	z-index: 100;
 }
 
 .big-summary-image {
 	height: 100vh;
 	width: 100vw;
+	margin-bottom: -0.6%;
 }
+
+.small-summary-image {
+	height: 70vh;
+	width: 50%;
+}
+
+.small-summary-text {
+	height: 94.4vh;
+	width: 50vw;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	background-color: grey;
+	margin: 0 auto;
+	text-align: left;
+	color: white;
+	padding: 9%;
+	font-family: portland-bold-font;
+	font-size: 2.1em;
+}
+
+.video-align {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	margin: 0%;
+	padding: 0%;
+	border: 0%;
+}
+
+/*.video-container {
+	margin-bottom: -0.4%;
+}*/
+
+.summary-bottom {
+	width: 100vw;
+	height: auto;
+}
+
+.summary-image {
+	width: 100vw;
+	height: 120vh;
+	margin-bottom: 0%;
+}
+
+.slick-slider {
+	margin-bottom: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

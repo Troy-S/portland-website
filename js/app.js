@@ -1,5 +1,5 @@
 angular
-	.module('portlandApp', ['ui.router', 'portlandApp.controllers'])
+	.module('portlandApp', ['ui.router', 'portlandApp.controllers', 'ngMaterial'])
 	.config(MainRouter)
 
 MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
