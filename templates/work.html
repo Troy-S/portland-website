@@ -1,4 +1,4 @@
-<html style="background-color: black !important;">
+<html>
 	<body layout="row">
 
 		<md-toolbar layout="column" flex>
@@ -26,6 +26,10 @@
 		if (currentSlide == 0) {
 			$('.main-slider').slick('slickPause');
 			theVideo.play();
+		} else {
+			if (currentSlide == 4) {
+				$('.main-slider').slick('slickPlay');
+			}
 		}
 	});
 
@@ -40,7 +44,7 @@
 
 		<div class="main-slider" layout-fill>
 			<div>
-				<video id="theVideo" class="video-align" ng-src="/assets/cw-carousel-video.mp4" ng-cloak autoplay muted>
+				<video id="theVideo" style="background-color: black;" class="video-align" ng-src="/assets/cw-carousel-video.mp4" ng-cloak autoplay muted>
 					<source class="carousel-video" ng-src="/assets/cw-carousel-video.mp4" type="video/mp4" muted/>
 				</video>
 			</div>
@@ -89,3 +93,72 @@
 
 	</body>
 </html>
+<!-- <html>
+	<body>
+
+		<div layout="row" layout="column">
+			<div flex>
+				<md-toolbar layout="column" flex>
+				    <div class="md-toolbar-tools nav-bar">
+				    	<h1 class="nav-subtitle">BRANDING</h1>
+				    	<span flex></span>
+				      	<md-button ng-click="openRightMenu()" class="portland-nav">PORTLAND.<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder</md-icon></md-button>
+				    </div>
+				</md-toolbar>
+				<md-sidenav md-component-id="right" md-is-open="true" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
+
+				 </md-sidenav>
+			</div>
+		</div>
+		
+		<div layout="row" layout="column">
+		  	<div flex style="background:grey; height: 100vh;">
+
+		  	</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex class="amuse-hero-text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+			</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex style="background:grey; height: 100vh;">
+				<img ng-src="/assets/     .jpg" />
+			</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex class="amuse-summary-text" style="background:black; height: 100vh;">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div flex style="background:lightgrey; height: 100vh;">
+				<img ng-src="/assets/     .jpg" />
+			</div>
+		</div>
+
+		<div layout="column" layout="row">
+			<div flex style="background:pink; height: 100vh;">
+				<video controls>
+					<source type="video/mp4" ng-src="/assets/      .mp4" >
+				</video>
+			</div>
+		</div>
+
+		<div layout="column" layout="row">
+			<div flex style="background:teal; height: 100vh;">
+				<img ng-src="/assets/    .jpg" />
+			</div>
+		</div>
+
+	</body>
+</html> -->

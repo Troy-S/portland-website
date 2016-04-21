@@ -1,4 +1,4 @@
-<html style="">
+<html>
 	<body>
 		<div style="position: fixed;" ng-controller="HomeController" ng-cloak>
 			<md-toolbar layout="column">
@@ -11,19 +11,21 @@
 			<div style="overflow: hidden;" class="home-container">
 				<div class="tile-one" layout="row">
 					<a ui-sref="work">
-					<img ng-src="/assets/ukcoffeeweek-home.jpg" />
+					<img class="image" style="overflow-y: hidden;" ng-src="/assets/ukcoffeeweek-home.jpg" />
 					<div class="tile-banner">
 						<h1 class="tile-title" style="color: gold;">UK Coffee Week<span class="fl-right">WORK</span></h1>
 					</div></a>
 				</div>	
 				<div class="tile-two" layout="row">
-					<img ng-src="/assets/amuse-home.jpg" />
+					<a ui-sref="amuse">
+					<img class="image" ng-src="/assets/amuse-home.jpg" />
 					<div class="tile-banner">
 						<h1 class="tile-title" style="color: pink;">Amuse Beauty Studio<span class="fl-right">WORK</span></h1>
-					</div>
+					</div></a>
 				</div>				
 				<div class="tile-three" layout="row">
 					<img ng-src="/assets/clickcollect-home.jpg" />
+					<h1 class="slide"> Click & Collect </h1>
 					<div class="tile-banner">
 						<h1 class="tile-title" style="color: darkgrey;">Retail Design World<span class="fl-right">NEWS</span></h1>
 					</div>
@@ -41,8 +43,9 @@
 						<h1 class="tile-title" style="color: lightblue;">Twitter<span class="fl-right">NEWS</span></h1>
 					</div>
 				</div>				
-				<div class="tile-six" layout="row" flex="25">
-					<div style="height: 10% !important" class="tile-banner">
+				<div class="tile-six" layout="row">
+					<img class="image" ng-src="/assets/bracknell-home.jpg" />
+					<div class="tile-banner" style="height: 10%;">
 						<h1 class="tile-title" style="color: green;">Bracknell Regeneration<span class="fl-right">WORK</span></h1>
 					</div>
 				</div>

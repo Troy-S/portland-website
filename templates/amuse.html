@@ -1,0 +1,81 @@
+<html>
+	<body>
+
+		<div layout="row" layout="column">
+			<div flex>
+				<md-toolbar layout="column" flex>
+				    <div class="md-toolbar-tools nav-bar">
+				    	<h1 class="nav-subtitle">RETAIL DESIGN</h1>
+				    	<span flex></span>
+				      	<md-button ng-click="openRightMenu()" class="portland-nav">PORTLAND.<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder</md-icon></md-button>
+				    </div>
+				</md-toolbar>
+				<md-sidenav md-component-id="right" md-is-open="true" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
+
+				 </md-sidenav>
+			</div>
+		</div>
+
+<script type="text/javascript">
+	$('.amuse-slider').slick({
+		dots: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		speed: 100,
+		arrows: false
+	})
+</script>
+		
+		<div layout="row" layout="column">
+		  	<div flex class="amuse-slider" style="background:grey; height: 100vh;">
+		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_1.jpg" /></div>
+		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_2.jpg" /></div>
+		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_3.jpg" /></div>
+		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_4.jpg" /></div>
+		  	</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex style="letter-spacing: 1px; font-size: 2.5em;" class="amuse-hero-text center-text">
+				Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit, sed do eiusmod
+				tempor <br /> incididunt ut labore et dolore
+			</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex style="background:grey; height: 100vh;">
+				<img style="height: 100vh; width: 100vw;" ng-src="/assets/AMUSE_SUMMARY_IMAGE.jpg" />
+			</div>
+		</div>
+
+		<div layout="row" layout="column">
+			<div flex style="background:lightgrey; height: 70vh;">
+				<img style="height: 70vh; width: 50vw;" ng-src="/assets/AMUSE_COPY_IMG_01_.jpg" />
+			</div>
+			<div flex class="amuse-summary-text" style="background: #EA5297; height: 70vh;">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+
+		<div style="background: black;" layout="column" layout="row">
+			<div flex style="background: black; height: 90vh; margin: 0 auto;">
+				<img style="height: 90vh;" ng-src="/assets/AMUSE_MAIN_IMG_02_.jpg" />
+			</div>
+		</div>
+
+		<div layout="column" layout="row">
+			<div flex style="background:teal; height: 100vh;">
+				<img style="width: 100vw; height: 100vh;" ng-src="/assets/AMUSE_MAIN_IMG_03_.jpg" />
+			</div>
+		</div>
+
+	</body>
+</html>
