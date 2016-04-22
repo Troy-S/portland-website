@@ -7,3 +7,10 @@ angular.module('portlandApp.controllers', [])
 .controller('WorkController', function($scope) {
 
 })
+
+.controller('AmuseController', function($scope, $mdSidenav) {
+	$scope.openRightMenu = function() {
+	    $mdSidenav('right').toggle();
+	    console.log($scope.openRightMenu);
+	  };
+})

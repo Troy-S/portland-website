@@ -49,46 +49,45 @@ html {
 .tile-one {
 	height: 46vh;
 	width: 25vw;
-	background-color: yellow;
 	position: relative;
+	overflow: hidden;
 }
 
 .tile-two {
 	height: 46vh;
 	width: 25vw;
-	background-color: pink;
 	position: relative;
+	overflow: hidden;
 }
 
 .tile-three {
 	height: 46vh;
 	width: 50vw;
-	background-color: grey;
 	position: relative;
+	overflow: hidden;
 }
 
 .tile-four {
 	height: 46vh;
 	width: 50vw;
-	background-color: ;
 	position: relative;
 	background-image: url('/assets/studio-home.jpg');
+	overflow: hidden;
 }
 
 .tile-five {
 	height: 46vh;
 	width: 25vw;
-	background-color: navy;
 	position: relative;
 	background-image: url('/assets/twitter-home.jpg');
+	overflow: hidden;
 }
 
 .tile-six {
 	height: 46vh;
 	width: 25vw;
-	background-color: green;
 	position: relative;
-	background-image: url('/assets/bracknell-home.jpg');
+	overflow: hidden;
 }
 
 .tile-banner {
@@ -133,7 +132,7 @@ html {
 .hero-text {
 	/*height: 40vh;*/
 	/*width: auto;*/
-	margin-top: 0.3%;
+	margin-top: -0.3%;
 	background: black;
 	color: white;
 	font-size: 1.5em;
@@ -171,7 +170,6 @@ html {
 }
 
 .video-align {
-	background-color: black;
 	width: 100vw;
 	height: 100vh;
 	margin: 0%;
@@ -199,19 +197,76 @@ html {
 }
 
 
+/*AMUSE PAGE*/
 
+.amuse-hero-text {
+	background: black; 
+	height: 30vh; 
+	color: white; 
+	font-family: portland-bold-font; 
+	font-size: 1.5em; 
+	text-align: center; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
 
+.amuse-summary-text {
+	max-width: 50vw;
+	background: black; 
+	height: 30vh; 
+	color: white; 
+	font-family: portland-bold-font; 
+	font-size: 1.5em; 
+	text-align: left; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	padding-right: 10%;
+	padding-left: 10%;
+}
 
+/*ANIMATIONS*/
 
+/*HOME-PAGE_________*/
 
+.image {
+	height: 46vh;
+	width: 25vw;
+	transition: all 1s ease;
+}
 
+.image:hover {
+	transform: scale(1.5);
+}
 
+.slide {
+	position: absolute;
+	top: 0;
+	left: -500px;
+	background: rgba(1,1,1, 0);
+	-webkit-animation: slide 1.5s forwards;
+	-webkit-animation-delay: 2s;
+	animation: slide 1.5s forwards;
+	animation-delay: 2s;
+	font-family: portland-bold-font;
+	font-size: 5em;
+	color: white;
+	margin-left: 7%;
+}
 
+@-webkit-keyframes slide {
+	100% { left: 0; }
+}
 
-
-
-
-
+.center-text {
+	text-align: center; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
 
 
 
