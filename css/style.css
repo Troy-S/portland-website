@@ -167,6 +167,7 @@ div {
 .tile-one {
 	height: 46vh;
 	width: 25vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -174,11 +175,16 @@ div {
 	position: relative;
 	background-image: url('/assets/01_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-two {
 	height: 46vh;
 	width: 25vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -186,11 +192,16 @@ div {
 	position: relative;
 	background-image: url('/assets/02_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-three {
 	height: 46vh;
 	width: 50vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -198,11 +209,16 @@ div {
 	position: relative;
 	background-image: url('/assets/03_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-four {
 	height: 46.8vh;
 	width: 50vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -210,11 +226,17 @@ div {
 	position: relative;
 	background-image: url('/assets/04_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	background-image: url('/assets/studio-home.jpg');
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-five {
 	height: 46.8vh;
 	width: 25vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -222,11 +244,17 @@ div {
 	position: relative;
 	background-image: url('/assets/05_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	background-image: url('/assets/twitter-home.jpg');
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-six {
 	height: 46.8vh;
 	width: 25vw;
+<<<<<<< HEAD
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
@@ -234,6 +262,10 @@ div {
 	position: relative;
 	background-image: url('/assets/06_TILE.jpg');
 	background-size: cover;
+=======
+	position: relative;
+	overflow: hidden;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 }
 
 .tile-banner {
@@ -278,7 +310,13 @@ div {
 }
 
 .hero-text {
+<<<<<<< HEAD
 	clear: both;
+=======
+	/*height: 40vh;*/
+	/*width: auto;*/
+	margin-top: -0.3%;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
 	background: black;
 	color: white;
 	font-size: 1.5em;
@@ -351,7 +389,6 @@ div {
 }
 
 .video-align {
-	background-color: black;
 	width: 100vw;
 	height: 100vh;
 	margin: 0%;
@@ -392,6 +429,7 @@ div {
     color: green;
 }
 
+<<<<<<< HEAD
 /*AMJAL PAGE*/
 
 .amjal-slider {
@@ -609,15 +647,78 @@ div {
 	-webkit-transform: translateZ(-1px) scale(2);
 	        transform: translateZ(-1px) scale(2);
 	z-index: -1;
+=======
+/*AMUSE PAGE*/
+
+.amuse-hero-text {
+	background: black; 
+	height: 30vh; 
+	color: white; 
+	font-family: portland-bold-font; 
+	font-size: 1.5em; 
+	text-align: center; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
 }
 
+.amuse-summary-text {
+	max-width: 50vw;
+	background: black; 
+	height: 30vh; 
+	color: white; 
+	font-family: portland-bold-font; 
+	font-size: 1.5em; 
+	text-align: left; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	padding-right: 10%;
+	padding-left: 10%;
+}
 
+/*ANIMATIONS*/
 
+/*HOME-PAGE_________*/
 
+.image {
+	height: 46vh;
+	width: 25vw;
+	transition: all 1s ease;
+>>>>>>> 410eff62da15e693cef3d8563509c5be5e6cfbed
+}
 
+.image:hover {
+	transform: scale(1.5);
+}
 
+.slide {
+	position: absolute;
+	top: 0;
+	left: -500px;
+	background: rgba(1,1,1, 0);
+	-webkit-animation: slide 1.5s forwards;
+	-webkit-animation-delay: 2s;
+	animation: slide 1.5s forwards;
+	animation-delay: 2s;
+	font-family: portland-bold-font;
+	font-size: 5em;
+	color: white;
+	margin-left: 7%;
+}
 
+@-webkit-keyframes slide {
+	100% { left: 0; }
+}
 
+.center-text {
+	text-align: center; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
 
 
 
