@@ -1,4 +1,85 @@
 <html>
+<body>
+
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			overflow-y: hidden;
+			border: 1px solid black;
+		}
+	</style>
+
+	<div layout="row" layout="column">
+		<div flex>
+			<md-toolbar layout="column" flex>
+				<div class="md-toolbar-tools" style="background: black; height: 20vh;">
+				    <span flex></span>
+				    <md-button ng-click="openRightMenu()" class="portland-nav">PORTLAND.
+				      	<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder
+				      	</md-icon>
+				    </md-button>
+				</div>
+			</md-toolbar>
+			<md-sidenav md-component-id="right" md-is-open="true" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
+			</md-sidenav>
+		</div>
+	</div>
+
+	<div layout="row" flex layout-fill>
+		<div class="tile-container" flex="25">
+			<a ui-sref="work"><div class="tile-one image"></div>
+				<div class="tile-text" flex>
+					<span class="span-left" style="color: gold;">UK Coffee Week</span>
+					<span class="span-right">WORK</span>
+				</div></a>
+		</div>
+		<div class="tile-container" flex="25">
+			<a ui-sref="amuse"><div class="tile-two image"></div>
+			<div class="tile-text">
+				<span class="span-left" style="color: pink;">Amuse Beauty Studio</span>
+				<span class="span-right">WORK</span>
+			</div></a>
+		</div>
+		<div class="tile-container" flex>
+			<div class="tile-three"></div>
+			<h1 class="slide">Click & Collect</h1>
+			<h1 class="slide" style="animation-delay: 2.5s; margin-top: 8%;">A Christmas Hit</h1>
+			<h1 class="slide" style="animation-delay: 3s; margin-top: 13%;">For Families</h1>
+			<div class="tile-text">
+				<span class="span-left" style="color: white;">Retail Design World</span>
+				<span class="span-right">NEWS</span>
+			</div>
+		</div>
+	</div>
+
+	<div layout="row" flex>
+		<div class="tile-container" flex="50">
+			<div class="tile-four"></div>
+			<div class="tile-text">
+				<span class="span-left" style="color: orange;">Portland.</span>
+				<span class="span-right">STUDIO</span>
+			</div>
+		</div>
+		<div class="tile-container" flex="25">
+			<div class="tile-five"></div>
+			<div class="tile-text">
+				<span class="span-left" style="color: skyblue;">Twitter</span>
+				<span class="span-right">NEWS</span>
+			</div>
+		</div>
+		<div class="tile-container" flex>
+			<div class="tile-six image"></div>
+			<div class="tile-text">
+				<span class="span-left" style="color: white;">Bracknell Regeneration</span>
+				<span class="span-right">WORK</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+<!-- <html>
 	<body>
 		<div style="position: fixed;" ng-controller="HomeController" ng-cloak>
 			<md-toolbar layout="column">
@@ -11,14 +92,14 @@
 			<div style="overflow: hidden;" class="home-container">
 				<div class="tile-one" layout="row">
 					<a ui-sref="work">
-					<img class="image" style="overflow-y: hidden;" ng-src="/assets/ukcoffeeweek-home.jpg" />
+					<img class="image" style="overflow-y: hidden;" ng-src="/assets/01_TILE.jpg" />
 					<div class="tile-banner">
 						<h1 class="tile-title" style="color: gold;">UK Coffee Week<span class="fl-right">WORK</span></h1>
 					</div></a>
 				</div>	
 				<div class="tile-two" layout="row">
 					<a ui-sref="amuse">
-					<img class="image" ng-src="/assets/amuse-home.jpg" />
+					<img class="image" ng-src="/assets/02_TILE.jpg" />
 					<div class="tile-banner">
 						<h1 class="tile-title" style="color: pink;">Amuse Beauty Studio<span class="fl-right">WORK</span></h1>
 					</div></a>

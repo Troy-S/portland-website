@@ -2,10 +2,21 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 10px;
-	width: auto;
-	height: auto;
+	width: 100vw;
+	/*height: auto;*/
 	font-family: portland-thin-font;
+}
+
+html, body {
+	height: 100vh;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	padding: 0;
+	margin: 0;
 }
 
 *, *:before, *:after {
@@ -22,17 +33,124 @@ html {
 	src: url('Gotham-Thin.otf');
 }
 
+.move {
+	margin-top: 2.0%;
+}
 
 /*HOME PAGE*/
+.image {
+	height: 100%;
+	width: 100%;
+	transition: all 4s ease;
+}
+
+.image:hover {
+	-webkit-transform: scale(1.5);
+	        transform: scale(1.5);
+}
+
+.image:before:after {
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: -500px;
+	background: rgba(1,1,1, 0);
+	-webkit-animation: slide 1.5s forwards;
+	        animation: slide 1.5s forwards;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	font-family: portland-bold-font;
+	font-size: 5vh;
+	color: white;
+	margin-left: 5%;
+}
+
+@-webkit-keyframes slide {
+	100% { left: 0; }
+}
+@keyframes slide {
+	100% { left: 0; }
+}
+
+@-webkit-keyframes slideOutLeft {
+	to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+@keyframes slideOutLeft {
+	to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+.ng-enter { z-index: 8888; }
+.ng-leave { z-index: 9999; }
+
+.page-home.ng-enter { -webkit-animation: scaleUp 0.5s both ease-in; animation: scaleUp 0.5s both ease-in; }
+.page-home.ng-leave { -webkit-animation:slideOutLeft 0.5s both ease-in; animation:slideOutLeft 0.5s both ease-in; }
+
+.page-amuse.ng-enter { -webkit-animation: scaleUp 0.5s both ease-in; animation: scaleUp 0.5s both ease-in; }
+.page-amuse.ng-leave { -webkit-animation:slideOutLeft 0.5s both ease-in; animation:slideOutLeft 0.5s both ease-in; }
+
+.span-right {
+	float: right; 
+	font-size: 3vh; 
+	color: white; 
+	padding: 1%; 
+	line-height: 1.4;
+}
+
+.span-left {
+	float: left; 
+	font-size: 2vh; 
+	padding: 1%; 
+	font-family: portland-bold-font; 
+	line-height: 2;
+}
+
+.tile-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.tile-text {
+	background-color: rgba(1,1,1, 0.4);
+	position: absolute;
+	top: 89.61%;
+	width: 100%;
+	font-size: 1vh;
+}
+
 .portland-nav {
 	margin-right: 1% !important;
 	color: white;
+	background: black;
 	font-family: portland-bold-font;
-	font-size: 0.9em;
+	font-size: 1.5vw;
 }
 
 .portland-menu-icon {
-	font-size: 1.5em;
+	font-size: 2vw;
 }
 
 .nav-bar {
@@ -49,64 +167,93 @@ html {
 .tile-one {
 	height: 46vh;
 	width: 25vw;
-	background-color: yellow;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
+	background-image: url('/assets/01_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-two {
 	height: 46vh;
 	width: 25vw;
-	background-color: pink;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
+	background-image: url('/assets/02_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-three {
 	height: 46vh;
 	width: 50vw;
-	background-color: grey;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
+	background-image: url('/assets/03_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-four {
-	height: 46vh;
+	height: 46.8vh;
 	width: 50vw;
-	background-color: ;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
-	background-image: url('/assets/studio-home.jpg');
+	background-image: url('/assets/04_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-five {
-	height: 46vh;
+	height: 46.8vh;
 	width: 25vw;
-	background-color: navy;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
-	background-image: url('/assets/twitter-home.jpg');
+	background-image: url('/assets/05_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-six {
-	height: 46vh;
+	height: 46.8vh;
 	width: 25vw;
-	background-color: green;
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
 	position: relative;
-	background-image: url('/assets/bracknell-home.jpg');
+	background-image: url('/assets/06_TILE.jpg');
+	background-size: cover;
 }
 
 .tile-banner {
 	position: absolute;
 	width: 100%;
-	height: 9%;
+	height: 100%;
 	bottom: 0;
 	left: 0;
 	background-color: rgba(1,1,1, 0.7);
 }
 
 .home-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .tile-title {
 	margin-left: 2%;
-	font-size: 1.1em;
+	font-size: 0.8vw;
 	color: white;
 	overflow: hidden;
 }
@@ -115,10 +262,10 @@ html {
 	float: right;
 	color: white;
 	margin-right: 2%;
+	font-size: 0.9vw;
 }
 
 /*WORK PAGE*/
-
 .carousel-images {
 	height: 100vh;
 	width: 100%;
@@ -131,15 +278,15 @@ html {
 }
 
 .hero-text {
-	/*height: 40vh;*/
-	/*width: auto;*/
-	margin-top: 0.3%;
+	clear: both;
 	background: black;
 	color: white;
 	font-size: 1.5em;
 	font-family: portland-bold-font;
 	padding: 2%;
-	justify-content: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	text-align: center;
 	z-index: 100;
 }
@@ -167,7 +314,40 @@ html {
 	color: white;
 	padding: 9%;
 	font-family: portland-bold-font;
-	font-size: 2.1em;
+	font-size: 2em;
+}
+
+.text-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	overflow: auto;
+	margin: 0 auto;
+	background: #D21378;
+}
+
+.amuse-hero-text {
+	font-size: 4vh; 
+	background-color: black; 
+	color: white; 
+	text-align: center; 
+	padding: 2%; 
+	font-family: portland-bold-font;
+}
+
+.text-container .amuse-text-position {
+	background: #D21378;
+	overflow: auto;
+	color: white;
+	padding: 20%;
+	font-size: 2.2vh;
+	font-family: portland-bold-font;
 }
 
 .video-align {
@@ -179,31 +359,257 @@ html {
 	border: 0%;
 }
 
-/*.video-container {
-	margin-bottom: -0.4%;
-}*/
-
 .summary-bottom {
 	width: 100vw;
 	height: auto;
 }
 
-.summary-image {
-	width: 100vw;
-	height: 120vh;
-	margin-bottom: 0%;
+.amjal-summary-image {
+	width: 50vw;
+	height: auto;
+	margin-bottom: -0.1%;
 }
 
 .slick-slider {
 	margin-bottom: 0px !important;
 }
 
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+ 
+::-webkit-scrollbar-track-piece d {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    color: black;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0, 1); 
+    color: green;
+}
 
+/*AMJAL PAGE*/
 
+.amjal-slider {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
 
+.slider-images {
+	height: 100vh;
+	width: 100vw;
+/*	height: 100%;
+	width: 100%;*/
+}
 
+.amjal-hero-text {
+	color: rgba(1,1,1, 0.1);
+	margin: 0 auto;
+	text-align: center;
+	font-size: 3.5vh;
+	font-family: portland-bold-font;
+	height: 30vh;
+	width: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
 
+.inner-container {
+	/*width: 50%;*/
+	margin: 15%;
+	font-size: 2vh;
+	color: white;
+	font-family: portland-bold-font;
+}
 
+.outer-container {
+	height: auto;
+	width: 50vw;
+	background-color: #C07F2A;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.toolbar {
+	background-color: black;
+	position: fixed;
+}
+
+.parallax-image {
+	width: 100vw;
+}
+
+.auto-image {
+	height: auto;
+	width: 100%;
+}
+
+@-webkit-keyframes shimmer {
+	0%   { background-position: top left; }
+	100% { background-position: top right ; }
+}
+@keyframes shimmer {
+	0%   { background-position: top left; }
+	100% { background-position: top right; }
+}
+
+.shimmer {
+  text-align: center;
+  color: rgba(1,1,1, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, rgba(1,1,1, 0.1)));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, rgba(1,1,1, 0.1)));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, rgba(1,1,1, 0.1)));
+  background-size: 75% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.shiny
+{
+  color: #F5C21B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5C21B), to(#D17000));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: portland-bold-font;
+  font-size: 3vw;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 30%;
+  height: 30vh;
+  width: 40vw;
+}
+
+.shiny::before
+{
+	background-position: -180px;
+	-webkit-animation: flare 5s infinite;
+  -webkit-animation-timing-function: linear;
+  background-image: linear-gradient(65deg, transparent 20%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.3) 27%, transparent 27%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "Shiny";
+  color: #FFF;
+  display: block;
+  padding-right: 140px;
+  position: absolute;
+}
+
+.shiny::after
+{
+  content: "";
+  color: #FFF;
+  display: block;
+  position: absolute;
+  text-shadow: 0 1px #6E4414, 0 2px #6E4414, 0 3px #6E4414, 0 4px #6E4414, 0 5px #6E4414, 0 6px #6E4414, 0 7px #6E4414, 0 8px #6E4414, 0 9px #6E4414, 0 10px #6E4414;
+  top: 0;
+  z-index: -1;
+}
+
+.inner-shiny::after, .inner-shiny::before
+{
+  -webkit-animation: sparkle 5s infinite;
+  -webkit-animation-timing-function: linear;
+	background: #FFF;
+  border-radius: 100%;
+  box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 25px #FFF, 0 0 30px #FFF, 0 0 35px #FFF;
+  content: "";
+  display: block;
+  height: 10px;
+  opacity: 0.7;
+  position: absolute;
+  width: 10px;
+}
+
+.inner-shiny::before
+{
+  -webkit-animation-delay: 0.2s;
+  height: 7px;
+  left: 0.12em;
+  top: 0.8em;
+  width: 7px;
+}
+
+.inner-shiny::after
+{
+  top: 0.32em;
+  right: -5px;
+}
+
+@-webkit-keyframes flare
+{
+  0%   { background-position: -180px; }
+  30%  { background-position: 500px; }
+  100% { background-position: 500px; }
+}
+
+@-webkit-keyframes sparkle
+{
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  40%  { opacity: 0.8; }
+  60%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.parallax-slide {
+	position: relative;
+	padding: 25vh 10%;
+	min-height: 100vh;
+	width: 100vw;
+	-webkit-transform-style: inherit;
+	        transform-style: inherit;
+}
+
+.parallax-slide:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.parallax-slide, .parallax-slide:before {
+	background: 50% 50% / cover;
+}
+
+#slide1 {
+	background-image: url('/assets/shop.jpg');
+	-webkit-transform: translateZ(-1px) scale(2);
+	        transform: translateZ(-1px) scale(2);
+	z-index: -1;
+}
 
 
 

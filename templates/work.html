@@ -1,13 +1,21 @@
 <html>
 	<body layout="row">
 
-		<md-toolbar layout="column" flex>
-		    <div class="md-toolbar-tools nav-bar">
-		    	<h1 class="nav-subtitle">BRANDING</h1>
-		    	<span flex></span>
-		      	<md-button class="portland-nav">PORTLAND.<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder</md-icon></md-button>
-		    </div>
-		</md-toolbar>
+		<div layout="row" layout="column">
+		<div flex>
+			<md-toolbar layout="column" flex>
+				<div class="md-toolbar-tools nav-bar">
+				    <span flex></span>
+				    <md-button ng-click="openRightMenu()" class="portland-nav">PORTLAND.
+				      	<md-icon class="portland-menu-icon" md-font-icon="reorder">reorder
+				      	</md-icon>
+				    </md-button>
+				</div>
+			</md-toolbar>
+			<md-sidenav md-component-id="right" md-is-open="true" md-is-locked-open="$mdMedia('min-width: 333px')" class="md-sidenav-right">
+			</md-sidenav>
+		</div>
+	</div>
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -52,16 +60,10 @@
 			<div><img class="carousel-images" ng-src="/assets/cw-carousel2.jpg" ng-cloak/></div>
 			<div><img class="carousel-images" ng-src="/assets/cw-carousel3.jpg" ng-cloak/></div>
 		</div>
-
-		<div layout="row" class="hero-text">
-			<p layout-align="center center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="hero-text">
+			<p layout-align="center center" ng-cloak>Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit, sed do eiusmod
+				tempor <br /> incididunt ut labore et dolore</p>
 		</div>
-
 		<div>
 			<img class="big-summary-image" ng-src="/assets/cw-summary.jpg" />
 		</div>
