@@ -25,5 +25,9 @@ angular.module('portlandApp.controllers', [])
 	$scope.openRightMenu = function() {
 	    $mdSidenav('right').toggle();
 	    console.log($scope.openRightMenu);
-	  };
+		};
+})
+
+.controller('AeliaController', function($scope) {
+	
 })

@@ -26,5 +26,11 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 			controller: "AmjalController"
 		})
 
+		.state('aelia', {
+			url: "/aelia",
+			templateUrl: "/templates/aelia.html",
+			controller: "AeliaController"
+		})
+
 		$urlRouterProvider.otherwise('/home');
 };

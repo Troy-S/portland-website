@@ -30,50 +30,57 @@
 </script>
 		
 		<div layout="row" layout="column">
-		  	<div flex class="amuse-slider" style="background:grey; height: 100vh;">
-		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_1.jpg" style="background-size: cover; position: relative;"/></div>
-		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_2.jpg" style="background-size: cover; position: relative;"/></div>
-		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_3.jpg" style="background-size: cover; position: relative;"/></div>
-		  		<div><img class="carousel-images" src="/assets/AMUSE_CAROUSEL_4.jpg" style="background-size: cover; position: relative;"/></div>
+		  	<div flex class="amuse-slider">
+		  		<div><img class="amuse-images" src="/assets/AMUSE_CAROUSEL_01.jpg" /></div>
+		  		<div><img class="amuse-images" src="/assets/AMUSE_CAROUSEL_02.jpg" /></div>
+		  		<div><img class="amuse-images" src="/assets/AMUSE_CAROUSEL_03.jpg" /></div>
+		  		<div><img class="amuse-images" src="/assets/AMUSE_CAROUSEL_04.jpg" /></div>
 		  	</div>
 		</div>
 
 		<div layout="row" layout="column">
-			<div class="amuse-hero-text" flex>
-				Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit, sed do eiusmod
-				tempor <br /> incididunt ut labore et dolore
+			<div flex class="amuse-hero-text-container">
+				<blockquote class="amuse-hero-text">
+					Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit, sed do eiusmod
+					tempor <br /> incididunt ut labore et dolore
+				</blockquote>
 			</div>
 		</div>
 
 		<div layout="row" layout="column">
-			<div flex style="background:grey; height: 100vh;">
-				<img style="height: 100vh; width: 100vw;" ng-src="/assets/AMUSE_SUMMARY_IMAGE.jpg" />
+			<div style="height: 100vh; width: 100vw;">
+				<img style="height: 100%; width: 100%;" ng-src="/assets/AMUSE_SUMMARY_IMG_01.jpg" />
 			</div>
 		</div>
 
-		<div layout="row" layout="column">
-			<div flex style="background:lightgrey; height: 70vh;">
-				<img style="height: 70vh; width: 50vw; position: relative; background-size: cover;" ng-src="/assets/AMUSE_COPY_IMG_01_.jpg" />
+		<div class="outer-copy-container" flex>
+
+			<div class="amuse-copy-container" flex>
+				<img class="amuse-copy-image" ng-src="/assets/AMUSE_COPY_IMG_01.jpg" />
 			</div>
-			<div flex class="text-container">
-				<p class="amuse-text-position">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+			<div class="text-container" flex>
+				<blockquote class="amuse-text-position">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</blockquote>
 			</div>
 		</div>
 
 		<div style="background: black;" layout="column" layout="row">
 			<div flex style="background: black; height: 90vh; margin: 0 auto;">
-				<img style="height: 90vh;" ng-src="/assets/AMUSE_MAIN_IMG_02_.jpg" />
+				<img style="height: 90vh;" ng-src="/assets/AMUSE_MAIN_IMG_02.jpg" />
 			</div>
 		</div>
 
 		<div layout="column" layout="row">
 			<div flex style="background:teal; height: 100vh;">
-				<img style="width: 100vw; height: 100vh;" ng-src="/assets/AMUSE_MAIN_IMG_03_.jpg" />
+				<img style="width: 100vw; height: 100vh;" ng-src="/assets/AMUSE_MAIN_IMG_03.jpg" />
 			</div>
 		</div>
 
